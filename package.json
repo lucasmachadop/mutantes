@@ -15,9 +15,7 @@
   "scripts": {
     "start": "nodemon src/index.js --exec babel-node --trace-deprecation",
     "build": "babel src -d dist --source-maps",
-    "test": "jest --verbose --silent",
-    "test:watch": "jest --watch",
-    "deploy": "firebase deploy --only functions:jucespCrawler"
+    "deploy": "firebase deploy --only functions:isMutant"
   },
   "author": {
     "name": "Lucas Peres",
@@ -33,9 +31,7 @@
     "eslint": "^4.17.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
-    "jest": "^22.4.2",
     "nodemon": "^1.14.12",
-    "supertest": "^3.0.0"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
