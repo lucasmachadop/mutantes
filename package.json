@@ -1,0 +1,52 @@
+{
+  "name": "xmen",
+  "version": "1.0.0",
+  "description": "function for mutants identification",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasmachadop/mutantes.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucasmachadop/mutantes/issues"
+  },
+  "homepage": "https://github.com/lucasmachadop/mutantes#readme",
+  "scripts": {
+    "start": "nodemon src/index.js --exec babel-node --trace-deprecation",
+    "build": "babel src -d dist --source-maps",
+    "test": "jest --verbose --silent",
+    "test:watch": "jest --watch",
+    "deploy": "firebase deploy --only functions:jucespCrawler"
+  },
+  "author": {
+    "name": "Lucas Peres",
+    "email": "lucas.peres@contabilizei.com.br"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-jest": "^22.1.0",
+    "babel-plugin-transform-es2017-object-entries": "0.0.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "jest": "^22.4.2",
+    "nodemon": "^1.14.12",
+    "supertest": "^3.0.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cheerio": "^1.0.0-rc.2",
+    "cors": "^2.8.4",
+    "dateformat": "^3.0.0",
+    "express": "^4.16.2",
+    "express-multipart-file-parser": "0.0.3",
+    "firebase-admin": "^5.8.2",
+    "firebase-functions": "^0.8.1",
+    "pem": "^1.12.3",
+    "request": "^2.83.0"
+  }
+}
