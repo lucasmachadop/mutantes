@@ -1,6 +1,6 @@
 **Mutants API**
 
-A execucao desse projeto requer **Node.js com versão acima de 6.11.1**.
+A execucao desse projeto requer **Node.js com versão igual ou acima de 6.11.1**.
 Antes de prosseguir as instruções certifique-se de rodar o comando **npm install** na pasta raiz.
 
 -> Para executar o projeto localmente você precisará executar:
