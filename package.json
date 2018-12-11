@@ -2,7 +2,7 @@
   "name": "xmen",
   "version": "1.0.0",
   "description": "function for mutants identification",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lucasmachadop/mutantes.git"
@@ -15,7 +15,7 @@
   "scripts": {
     "start": "nodemon src/index.js --exec babel-node --trace-deprecation",
     "build": "babel src -d dist --source-maps",
-    "deploy": "firebase deploy --only functions:isMutant"
+    "deploy": "firebase deploy --only functions"
   },
   "author": {
     "name": "Lucas Peres",
@@ -31,7 +31,7 @@
     "eslint": "^4.17.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
-    "nodemon": "^1.14.12",
+    "nodemon": "^1.14.12"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
@@ -41,7 +41,7 @@
     "express": "^4.16.2",
     "express-multipart-file-parser": "0.0.3",
     "firebase-admin": "^5.8.2",
-    "firebase-functions": "^0.8.1",
+    "firebase-functions": "2.1.0",
     "pem": "^1.12.3",
     "request": "^2.83.0"
   }

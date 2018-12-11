@@ -1,4 +1,9 @@
+import firebase from './firebase'
+
+const database = new firebase()
+
 exports.isMutant = async (dna) => {
+    database.createFirestore({ collection: 'dna', doc: '1', payload: { dna} })
     var horizotalSeqs = [[],[],[],[],[],[]]
     var verticalSeqs = []
 
