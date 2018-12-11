@@ -34,7 +34,6 @@ exports.isMutant = async (dna) => {
             [v[2][0],v[3][1],v[4][2],v[5][3]]]
 
     var mergedSeqs = horizotalSeqs.concat(obliqueSeqs).concat(verticalSeqs)
-    //console.log("merged: "+JSON.stringify(mergedSeqs))
 
     var nrSeqsSameBase = 0
     for (let i = 0; i < mergedSeqs.length; i++) {
