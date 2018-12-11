@@ -2,8 +2,14 @@ import firebase from './firebase'
 
 const database = new firebase()
 
+exports.verifyAndSaveDna = async (dna) => {
+    let isMutant = await module.exports.isMutant(dna)
+    database.createFirestore({ collection: 'dna', doc: dna.join(''),
+        payload: {dna,isMutant} })
+    return isMutant
+}
+
 exports.isMutant = async (dna) => {
-    database.createFirestore({ collection: 'dna', doc: '1', payload: { dna} })
     var horizotalSeqs = [[],[],[],[],[],[]]
     var verticalSeqs = []
 
@@ -55,4 +61,12 @@ exports.isMutant = async (dna) => {
     }
 
     return false
+}
+
+exports.getStats = async () => {
+    var dnaRef = database.getFirestore().collection('dna');
+    var mutant_dna = await dnaRef.where('isMutant','==',true).get()
+    var human_dna = await dnaRef.where('isMutant','==',false).get()
+    return {count_mutant_dna:mutant_dna.size,count_human_dna:human_dna.size,
+        ratio:(mutant_dna.size/human_dna.size)}
 }
