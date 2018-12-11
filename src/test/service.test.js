@@ -32,7 +32,7 @@ describe('#indicaCorretamenteSeDNAPossuiMutacao', () => {
             "CAGACA",
             "TGTGTA",
             "CACAGA",
-            "TGTGTG"]//
+            "TGTGTG"]
         const isMutant = await serviceModule.isMutant(input)
         expect(isMutant).toBe(true)
     })
