@@ -1,6 +1,6 @@
-**Mutant API**
+**Mutants API**
 
-Para executar o projeto você precisa rodar:
+Para executar o projeto localmente você precisará executar:
 
 ```
 npm install
@@ -8,7 +8,7 @@ npm run build
 npm run start
 ```
 
-Para fazer deploy do projeto você precisa rodar:
+Para fazer deploy do projeto você precisará executar:
 
 ```
 npm run build
