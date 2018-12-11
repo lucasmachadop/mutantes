@@ -1,10 +1,11 @@
-import firebase from './firebase'
+import firebase from './firestore'
 
 const database = new firebase()
 
 exports.verifyAndSaveDna = async (dna) => {
     let isMutant = await module.exports.isMutant(dna)
-    database.createFirestore({ collection: 'dna', doc: dna.join(''),
+    console.log("saving doc in firestore...")
+    await database.createDoc({ collection: 'dna', doc: dna.join(''),
         payload: {dna,isMutant} })
     return isMutant
 }
